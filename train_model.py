@@ -38,7 +38,8 @@ model.add(Dense(128, activation='relu'))
 model.add(Dropout(0.5))  # Dropout layer to prevent overfitting
 
 # Output layer (number of classes)
-num_classes = len(os.listdir('A:/trials/sign/images'))  # Based on your classes (A-Z, 1-9)
+image_folder = os.path.join(os.getcwd(), "images")
+num_classes = len([f for f in os.listdir(image_folder) if os.path.isdir(os.path.join(image_folder, f))])  # Based on your classes (A-Z, 1-9)
 model.add(Dense(num_classes, activation='softmax'))  # Softmax for multi-class classification
 
 # Compile the model
