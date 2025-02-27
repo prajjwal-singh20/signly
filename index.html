@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SIGNLY</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+
+  </head>
+  <body>
+    <header>
+      <div class="logo-container">
+        <img src="/newlogo.png" alt="Signly Logo" class="logo" /> 
+      </div>
+      <h1> <b>SIGNLY</b> <br>
+        <i>sign language Interpreter</i></h1>
+      <nav>
+        <ul>
+          <li><a href="#learn">Learn ISL</a></li>
+          <li><a href="#camera">Sign Recognition</a></li>
+          <li><a href="#speech">Speech to Text</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="learn">
+      <h2>Learn Indian Sign Language</h2>
+      <div class="sign-images">
+        <div class="sign-card">
+          <img src="images/A/0.jpg" alt="A" />
+          <p>A</p>
+        </div>
+        <div class="sign-card">
+          <img src="images/B/0.jpg" alt="B" />
+          <p>B</p>
+        </div>
+        <div class="sign-card">
+          <img src="images/C/0.jpg" alt="C" />
+          <p>C</p>
+        </div>
+        <div class="sign-card">
+          <img src="images/D/0.jpg" alt="D" />
+          <p>D</p>
+        </div>
+        <div class="sign-card">
+          <img src="images/E/0.jpg" alt="E" />
+          <p>E</p>
+        </div>
+        <div class="sign-card">
+          <img src="images/F/0.jpg" alt="F" />
+          <p>F</p>
+        </div>
+        <div class="sign-card">
+          <img src="images/G/0.jpg" alt="G" />
+          <p>G</p>
+        </div>
+        <div class="sign-card">
+          <img src="images/H/0.jpg" alt="H" />
+          <p>H</p>
+        </div>
+        <div class="sign-card">
+          <img src="images/I/0.jpg" alt="I" />
+          <p>I</p>
+        </div>
+        <div class="sign-card">
+          <img src="images/J/0.jpg" alt="J" />
+          <p>J</p>
+        </div>
+        <div class="sign-card">
+          <img src="images/K/0.jpg" alt="K" />
+          <p>K</p>
+        </div>
+        <div class="sign-card">
+          <img src="images/L/0.jpg" alt="L" />
+          <p>L</p>
+        </div>
+        <div class="sign-card">
+          <img src="images/M/0.jpg" alt="M" />
+          <p>M</p>
+        </div>
+        <div class="sign-card">
+          <img src="images/N/0.jpg" alt="N" />
+          <p>N</p>
+        </div>
+        <div class="sign-card">
+          <img src="images/O/0.jpg" alt="O" />
+          <p>O</p>
+        </div>
+        <div class="sign-card">
+          <img src="images/P/0.jpg" alt="P" />
+          <p>P</p>
+        </div>
+        <div class="sign-card">
+          <img src="images/Q/0.jpg" alt="Q" />
+          <p>Q</p>
+        </div>
+        <div class="sign-card">
+          <img src="images/R/0.jpg" alt="R" />
+          <p>R</p>
+        </div>
+      
+        <div class="sign-card">
+          <img src="images/S/0.jpg" alt="S" />
+          <p>S</p>
+        </div>
+        <div class="sign-card">
+          <img src="images/T/0.jpg" alt="T" />
+          <p>T</p>
+        </div>
+        <div class="sign-card">
+          <img src="images/U/0.jpg" alt="U" />
+          <p>U</p>
+        </div>
+        <div class="sign-card">
+          <img src="images/V/0.jpg" alt="V" />
+          <p>V</p>
+        </div>
+        <div class="sign-card">
+          <img src="images/W/0.jpg" alt="W" />
+          <p>W</p>
+        </div>
+        <div class="sign-card">
+          <img src="images/X/0.jpg" alt="X" />
+          <p>X</p>
+        </div>
+        <div class="sign-card">
+          <img src="images/Y/0.jpg" alt="Y" />
+          <p>Y</p>
+        </div>
+        <div class="sign-card">
+          <img src="images/Z/0.jpg" alt="Z" />
+          <p>Z</p>
+        </div>
+        
+        
+        <div class="sign-card">  <img src="images/1/2.jpg" alt="1" />
+            <p>1</p></div>
+        <div class="sign-card">  <img src="images/2/2.jpg" alt="2" />
+            <p>2</p></div>
+          
+            <div class="sign-card">  <img src="images/3/2.jpg" alt="3" />
+                <p>3</p></div>
+          
+            <div class="sign-card">  <img src="images/4/2.jpg" alt="4" />
+                <p>4</p></div>
+          
+            <div class="sign-card">  <img src="images/5/2.jpg" alt="5" />
+                <p>5</p></div>
+          
+            <div class="sign-card">  <img src="images/6/2.jpg" alt="6" />
+                <p>6</p></div>
+          
+            <div class="sign-card">  <img src="images/7/2.jpg" alt="7" />
+                <p>7</p></div>
+          
+            <div class="sign-card">  <img src="images/8/2.jpg" alt="8" />
+                <p>8</p></div>
+          
+            <div class="sign-card">  <img src="images/9/2.jpg" alt="9" />
+                <p>9</p></div>
+    </div>
+
+     
+
+      </div>
+    </section>
+
+    <section id="camera">
+      <h2>Sign Recognition </h2>
+      <div>
+        <video id="video" width="640" height="480" autoplay></video>
+        <button id="start-recognition">Start Recognition</button>
+        <p id="recognition-result">
+          Recognized Gesture: <span id="result-text"></span>
+        </p>
+      </div>
+    </section>
+
+    <section id="speech">
+      <h2>Speech to Text</h2>
+      <button id="start-speech">Start Speech Recognition</button>
+      <p id="speech-result">Recognized Text: <span id="speech-text"></span></p>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 Indian Sign Language Interpreter</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
