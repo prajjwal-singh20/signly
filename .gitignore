@@ -1,9 +1,9 @@
 venv
 sign_language_model
 class_names
-X_test.npy
-y_test.npy
-X_train.npy
-y_train.npy
-X_val.npy
-y_val.npy
+X_test
+y_test
+X_train
+y_train
+X_val
+y_val
