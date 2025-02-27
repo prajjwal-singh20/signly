@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SIGNLY</title>
+    <link rel="stylesheet" href="{{ url_for('send_static', path='style.css') }}" />
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+  </head>
+  <body>
+    <header>
+      <div class="logo-container">
+        <img src="{{ url_for('static', filename='newlogo.png') }}" alt="Signly Logo" class="logo" />
+      </div>
+      <h1><b>SIGNLY</b> <br><i>Sign Language Interpreter</i></h1>
+      <nav>
+        <ul>
+          <li><a href="#learn">Learn ISL</a></li>
+          <li><a href="#camera">Sign Recognition</a></li>
+          <li><a href="#speech">Speech to Text</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section id="camera">
+      <h2>Sign Recognition</h2>
+      <div>
+        <video id="video" width="640" height="480" autoplay></video>
+        <button id="start-recognition">Start Recognition</button>
+        <p id="recognition-result">Recognized Gesture: <span id="result-text"></span></p>
+      </div>
+    </section>
+
+    <section id="speech">
+      <h2>Speech to Text</h2>
+      <button id="start-speech">Start Speech Recognition</button>
+      <p id="speech-result">Recognized Text: <span id="speech-text"></span></p>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 Indian Sign Language Interpreter</p>
+    </footer>
+  </body>
+</html>

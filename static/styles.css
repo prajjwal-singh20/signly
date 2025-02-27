@@ -1,0 +1,205 @@
+/* Reset default margins, paddings & enable smooth UI */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+/* Base body styling */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #f8f4f8, #e8c5c0); /* Soft gradient */
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  text-align: center;
+}
+
+/* HEADER */
+header {
+  background: linear-gradient(135deg, #9c2d56, #7a1f3a); /* Gradient effect */
+  color: white;
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+  height: 120px;
+  border-radius: 20px;
+  background-color: #fff;
+  padding: 5px;
+}
+
+header nav ul {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+}
+
+header nav ul li {
+  display: inline;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  transition: 0.3s;
+  padding: 8px 15px;
+  border-radius: 10px;
+}
+
+header nav ul li a:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* SECTIONS */
+section {
+  padding: 40px;
+  margin: 30px auto;
+  max-width: 90%;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.3s ease-in-out;
+}
+
+section:hover {
+  transform: scale(1.02);
+}
+
+/* Section titles */
+h2 {
+  text-align: center;
+  color: #9c2d56;
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+/* SIGN LANGUAGE IMAGES */
+#learn .sign-images {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 15px;
+  border-radius: 10px;
+}
+
+/* Styling for sign language cards */
+.sign-card {
+  width: 150px;
+  height: 150px;
+  background-color: white;
+  text-align: center;
+  border: 3px solid transparent;
+  border-radius: 20px;
+  padding: 10px;
+  transition: 0.3s ease-in-out;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.sign-card img {
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+.sign-card:hover {
+  transform: scale(1.1);
+  border-color: #9c2d56;
+}
+
+/* CAMERA & SPEECH RECOGNITION SECTIONS */
+#camera,
+#speech {
+  background-color: #fff;
+  border: 2px solid #ddd;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+video {
+  display: block;
+  margin: 15px auto;
+  border: 3px solid #9c2d56;
+  border-radius: 12px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* BUTTONS */
+button {
+  background: linear-gradient(135deg, #9c2d56, #7a1f3a);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  background: linear-gradient(135deg, #7a1f3a, #5e152c);
+  transform: scale(1.05);
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 15px;
+  background: linear-gradient(135deg, #9c2d56, #7a1f3a);
+  color: white;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 768px) {
+  * {
+    overflow-x: hidden;
+  }
+
+  header {
+    flex-direction: column;
+    padding: 15px;
+    text-align: center;
+  }
+
+  .sign-images {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sign-card {
+    width: 120px;
+    height: 120px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  button {
+    font-size: 16px;
+    padding: 10px 15px;
+  }
+}
